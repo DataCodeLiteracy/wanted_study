@@ -3,6 +3,7 @@ import { httpClient } from '../../util/httpClient'
 
 export default function App() {
   const request = () => {
+    // httpClient.#baseURL = 'helloTodos' // 사용하는 곳에서 변경할 수도 있음.. 그때는 private하게.. 그렇게 되면 외부에서 ㅎ사용할 수 없음..
     httpClient.fetch('todos')
 
     // 통신할 때 마다 해야 하는 동작을 하나의 모듈에서 처리하고 싶다.

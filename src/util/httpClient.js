@@ -8,9 +8,9 @@
 
 class HttpClient {
   // url을 외부에서 조절할 수 있게 한다..?
-  baseURL
+  #baseURL
   constructor(baseURL) {
-    this.baseURL = baseURL
+    this.#baseURL = baseURL
   }
 
   fetch(endpoint, options = {}) {
