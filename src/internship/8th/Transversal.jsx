@@ -3,13 +3,7 @@ import { httpClient } from '../../util/httpClient'
 
 export default function App() {
   const request = () => {
-    httpClient.fetch('todos', {
-      // Authorization, 인증, 횡단 관심사를 처리
-      // 이걸 어떻게 잘 처리할 수 있을까?
-      headers: {
-        Authorization: 'ACCESS_TOKEN'
-      }
-    })
+    httpClient.fetch('todos', {})
 
     // 통신할 때 마다 해야 하는 동작을 하나의 모듈에서 처리하고 싶다.
 

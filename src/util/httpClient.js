@@ -8,7 +8,11 @@
 
 class HttpClient {
   fetch(endpoint, options) {
-    window.fetch('https://jsonplaceholder.typicode.com/' + endpoint, options)
+    window.fetch('https://jsonplaceholder.typicode.com/' + endpoint, {
+      headers: {
+        Authorization: 'ACCESS_TOKEN'
+      }
+    })
   }
 }
 
