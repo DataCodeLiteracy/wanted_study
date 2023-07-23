@@ -7,8 +7,8 @@
 // 3.baseURL 설정해주는 것, 자동으로 앞에 넣어주기
 
 class HttpClient {
-  fetch(url, options) {
-    window.fetch(url, options)
+  fetch(endpoint, options) {
+    window.fetch('https://jsonplaceholder.typicode.com/' + endpoint, options)
   }
 }
 
