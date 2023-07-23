@@ -7,8 +7,14 @@
 // 3.baseURL 설정해주는 것, 자동으로 앞에 넣어주기
 
 class HttpClient {
+  // url을 외부에서 조절할 수 있게 한다..?
+  baseURL
+  constructor(baseURL) {
+    this.baseURL = baseURL
+  }
+
   fetch(endpoint, options) {
-    window.fetch('https://jsonplaceholder.typicode.com/' + endpoint, {
+    window.fetch(this.baseURL + endpoint, {
       ...options,
       headers: {
         Authorization: 'ACCESS_TOKEN',
@@ -18,6 +24,6 @@ class HttpClient {
   }
 }
 
-const httpClient = new HttpClient()
+const httpClient = new HttpClient('https://jsonplaceholder.typicode.com/')
 
 export { httpClient }
