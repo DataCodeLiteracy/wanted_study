@@ -3,7 +3,10 @@ import { httpClient } from '../../util/httpClient'
 
 export default function App() {
   const request = () => {
-    httpClient.fetch('todos', {})
+    httpClient.fetch('todos', {
+      method: 'POST',
+      headers: { A: 'B' }
+    })
 
     // 통신할 때 마다 해야 하는 동작을 하나의 모듈에서 처리하고 싶다.
 
