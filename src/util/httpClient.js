@@ -13,7 +13,7 @@ class HttpClient {
     this.baseURL = baseURL
   }
 
-  fetch(endpoint, options) {
+  fetch(endpoint, options = {}) {
     window.fetch(this.baseURL + endpoint, {
       ...options,
       headers: {
