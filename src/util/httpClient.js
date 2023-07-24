@@ -17,8 +17,9 @@ class HttpClient {
     window.fetch(this.baseURL + endpoint, {
       ...options,
       headers: {
+        ...options.headers,
         Authorization: 'ACCESS_TOKEN',
-        ...options.headers
+        'Content-Type': 'application/json'
       }
     })
   }
