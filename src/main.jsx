@@ -19,10 +19,10 @@ const todoService = new TodoService(httpClient)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider authService={authService}>
-      <TodoProvider todoService={todoService}>
-        <App />
-      </TodoProvider>
-    </AuthProvider>
+    {/* <AuthProvider authService={authService}>
+      <TodoProvider todoService={todoService}> */}
+    <App />
+    {/* </TodoProvider>
+    </AuthProvider> */}
   </React.StrictMode>
 )
