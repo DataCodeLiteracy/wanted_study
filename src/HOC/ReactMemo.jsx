@@ -19,6 +19,8 @@ const ReactMemo = () => {
       </button>
       <ChildComponent name="memo X" value={text} />
       <MemoizedComponent name="memo O" value={text} />
+      {/* 잘못된 예시 - React.memo로 감싼 컴포넌트여도 props로 전달하는 부분에서 변경사항이 발생하면 리렌더링이 일어남.. */}
+      {/* <MemoizedComponent name="memo O" value={text} reRender={reRender} /> */}
       <ReturnFalseMemo name="return false" value={text} />
       <ReturnTrueMemo name="return true" value={text} />
     </div>
