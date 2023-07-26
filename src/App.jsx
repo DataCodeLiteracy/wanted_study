@@ -3,6 +3,7 @@ import Transversal from '../src/internship/8th/Transversal'
 import ReactMemo from './HOC/ReactMemo'
 import Dependency from './internship/8th/Dependency/Dependency'
 import Dependency_Auth from './internship/8th/Dependency/Dependency_Auth'
+import UseEffectStudy from './internship/8th/useEffect_study'
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
       {/* <Dependency_Auth />
       <br />
       <Dependency /> */}
-      <ReactMemo />
+      {/* <ReactMemo /> */}
+      <UseEffectStudy />
     </>
   )
 }
